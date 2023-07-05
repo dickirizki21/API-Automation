@@ -2,7 +2,7 @@ const request  = require('supertest')("https://kasir-api.belajarqa.com/");
 // import chai
 const expect = require('chai').expect;
 
-describe("List User", () => {
+describe("CRUD User", () => {
   it("List User Kasir Aja", async () => {
     const reqBody = {
       email: 'admin@tokoomdikjaya.com',

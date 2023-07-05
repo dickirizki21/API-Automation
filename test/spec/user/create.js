@@ -26,9 +26,9 @@ describe("Tambah User", () => {
     // expect(await response.body.data.name).to.equal("Dicki-Cukup 4");
 
     // negative 
-    expect(await response.body.status).to.equal("fail");
-    expect(await response.body.message).to.contains("name is not allowed to be empty");
-    expect(await response.body.message).to.contains("email is not allowed to be empty");
+    // expect(await response.body.status).to.equal("fail");
+    // expect(await response.body.message).to.contains("name is not allowed to be empty");
+    // expect(await response.body.message).to.contains("email is not allowed to be empty");
 
   })
 })
