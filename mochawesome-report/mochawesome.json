@@ -1,0 +1,157 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-07-05T05:29:58.225Z",
+    "end": "2023-07-05T05:30:00.301Z",
+    "duration": 2076,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a89f3dde-4391-4df7-92a2-49b1e4d6ad55",
+      "title": "",
+      "fullFile": "/Users/dickirizki/Quality Assurance/Learning/SanberCode/API-Automation/test/suite/user.suite.js",
+      "file": "/test/suite/user.suite.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "508c0b73-0429-4dc3-9858-c2e5859a3303",
+          "title": "List User",
+          "fullFile": "/Users/dickirizki/Quality Assurance/Learning/SanberCode/API-Automation/test/suite/user.suite.js",
+          "file": "/test/suite/user.suite.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "List User Kasir Aja",
+              "fullTitle": "List User List User Kasir Aja",
+              "timedOut": false,
+              "duration": 527,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const reqBody = {\n  email: 'admin@tokoomdikjaya.com',\n  password: 'Omdik12345'\n};\nconst login = await request.post('authentications').send(reqBody);\nconst response = await request.get('users').set('Authorization', ``);\n// console.log(await response.body.data.users);  \nconsole.log(await response.body);  \n// Assert\n// Positive\n// expect(await response.body.status).to.equal(\"success\");\n// expect(await response.body.data.users.length).to.equal(7);\n// Negative\n// expect(await response.body.statusCode).to.equal(401);\n// expect(await response.body.message).to.equal(\"Missing authentication\");",
+              "err": {},
+              "uuid": "0a7e3c64-986c-469b-9c72-0a41154eaf5b",
+              "parentUUID": "508c0b73-0429-4dc3-9858-c2e5859a3303",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Tambah User Kasir Aja",
+              "fullTitle": "List User Tambah User Kasir Aja",
+              "timedOut": false,
+              "duration": 534,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const loginData = {\n  email: 'admin@tokoomdikjaya.com',\n  password: 'Omdik12345'\n};\nconst dataUser = {\n  name: 'Dicki-cukup6',\n  email: '',\n  password: 'Omdik12345'\n};\nconst login = await request.post('authentications').send(loginData);\nconst response = await request.post('users').set('Authorization', `Bearer ${login.body.data.accessToken}`).send(dataUser);\n// console.log(await response.body.data.users);  \n// console.log(await response.body);  \n// Assert\n// Positive\n// expect(await response.body.status).to.equal(\"success\");\n// expect(await response.body.data.name).to.equal(\"Dicki-Cukup 4\");\n// negative \n// expect(await response.body.status).to.equal(\"fail\");\n// expect(await response.body.message).to.contains(\"name is not allowed to be empty\");\n// expect(await response.body.message).to.contains(\"email is not allowed to be empty\");",
+              "err": {},
+              "uuid": "387d6756-7f65-4a5f-a330-47289613faa9",
+              "parentUUID": "508c0b73-0429-4dc3-9858-c2e5859a3303",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Edit User Kasir Aja",
+              "fullTitle": "List User Edit User Kasir Aja",
+              "timedOut": false,
+              "duration": 487,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const loginData = {\n  email: 'admin@tokoomdikjaya.com',\n  password: 'Omdik12345'\n};\nconst dataUser = {\n  name: 'update-name',\n  email: 'updateemail@tokoomdikjaya.com',\n};\nconst login = await request.post('authentications').send(loginData);\nconst response = await request.put('users/2a8b6dda-f7a2-4b60-8c81-07de9f6472b5').set('Authorization', `Bearer ${login.body.data.accessToken}`).send(dataUser);\nconsole.log(await response.body.data.users);  \nconsole.log(await response.body);  \n// Assert\n// expect(await response.body.status).to.equal(\"success\");\n// expect(await response.body.data.name).to.equal(\"Dicki-Cukup3\");\n// Negative\n// expect(await response.body.status).to.equal(\"fail\");\n// expect(await response.body.message).to.contains('\"name\" is not allowed to be empty');\n// expect(await response.body.message).to.contains(\"email is not allowed to be empty\");",
+              "err": {},
+              "uuid": "14414940-4aef-4421-9af8-a5d20ee25ceb",
+              "parentUUID": "508c0b73-0429-4dc3-9858-c2e5859a3303",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Delete User Kasir Aja",
+              "fullTitle": "List User Delete User Kasir Aja",
+              "timedOut": false,
+              "duration": 519,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const loginData = {\n  email: 'admin@tokoomdikjaya.com',\n  password: 'Omdik12345'\n};\nconst login = await request.post('authentications').send(loginData);\nconst response = await request.del('users/{}').set('Authorization', `Bearer ${login.body.data.accessToken}`);\nconsole.log(await response.body);  \n// Assert\n// Positive\n// expect(await response.body.status).to.equal(\"success\");\n// expect(await response.body.data.name).to.equal(\"Dicki-Cukup3\");\n// Negative\n// expect(await response.body.message).to.equal(\"id tidak valid\");",
+              "err": {},
+              "uuid": "31083f4d-e3a4-4df2-aa8f-3205c2100a90",
+              "parentUUID": "508c0b73-0429-4dc3-9858-c2e5859a3303",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0a7e3c64-986c-469b-9c72-0a41154eaf5b",
+            "387d6756-7f65-4a5f-a330-47289613faa9",
+            "14414940-4aef-4421-9af8-a5d20ee25ceb",
+            "31083f4d-e3a4-4df2-aa8f-3205c2100a90"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2067,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
